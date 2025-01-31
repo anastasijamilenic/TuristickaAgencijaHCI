@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="TuristickaAgencija.Views.KlijentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TuristickaAgencija.ViewModels"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:KlijentViewModel />
+    </UserControl.DataContext>
+
+    <DockPanel Background="{DynamicResource MaterialDesignBackground}">
+        <Grid Background="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Top">
+            <!-- TabControl to organize sections into tabs -->
+            <TabControl>
+                <!-- Tab for displaying Klijenti -->
+                <TabItem Header="{DynamicResource PregledKlijenata}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- DataGrid for Klijenti -->
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  SelectedItem="{Binding SelectedKlijent, Mode=TwoWay}"
+                                  ItemsSource="{Binding Klijenti}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource KlijentID}" Binding="{Binding IdKlijenta}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Ime}" Binding="{Binding Ime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Prezime}" Binding="{Binding Prezime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Email}" Binding="{Binding Email}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Telefon}" Binding="{Binding BrojTelefona}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for adding a new Klijent -->
+                <TabItem Header="{DynamicResource DodavanjeKlijenta}">
+                    <Grid VerticalAlignment="Top">
+                        <StackPanel Orientation="Vertical" Margin="10">
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource ImeKlijenta}"
+                                     Text="{Binding NewKlijent.Ime, UpdateSourceTrigger=PropertyChanged}" Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Prezime}"
+                                     Text="{Binding NewKlijent.Prezime, UpdateSourceTrigger=PropertyChanged}" Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Email}"
+                                     Text="{Binding NewKlijent.Email, UpdateSourceTrigger=PropertyChanged}" Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Telefon}"
+                                     Text="{Binding NewKlijent.BrojTelefona, UpdateSourceTrigger=PropertyChanged}" Width="350" Margin="0,5,0,15" />
+                            <Button Content="{DynamicResource DodajKlijenta}" Command="{Binding AddKlijentCommand}" Width="200" Height="40" Margin="0,20,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for editing or deleting an existing Klijent -->
+                <TabItem Header="{DynamicResource IzmjenaBrisanjeKlijenta}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- DataGrid for Editing/Deleting Klijent -->
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  SelectedItem="{Binding SelectedKlijent, Mode=TwoWay}"
+                                  ItemsSource="{Binding Klijenti}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource KlijentID}" Binding="{Binding IdKlijenta}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Ime}" Binding="{Binding Ime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Prezime}" Binding="{Binding Prezime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Email}" Binding="{Binding Email}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Telefon}" Binding="{Binding BrojTelefona}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Center">
+                            <Button Content="{DynamicResource Izmijeni}" Command="{Binding EditKlijentCommand}" Width="100" Height="40" Margin="10,0,10,0" />
+                            <Button Content="{DynamicResource Obrisi}" Command="{Binding DeleteKlijentCommand}" Width="100" Height="40" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</UserControl>

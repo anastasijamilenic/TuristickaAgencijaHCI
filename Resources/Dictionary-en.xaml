@@ -1,0 +1,160 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+
+    <System:String x:Key="SmallFont">Small font</System:String>
+    <System:String x:Key="MidFont">Middle font</System:String>
+    <System:String x:Key="BigFont">Big font</System:String>
+    <System:String x:Key="Default">Arial</System:String>
+    <System:String x:Key="Consolas">Calibri</System:String>
+    <System:String x:Key="Serbian">Serbian</System:String>
+    <System:String x:Key="English">English</System:String>
+    <System:String x:Key="FontAndLang">Font and language:</System:String>
+    <System:String x:Key="FontSize">Font size:</System:String>
+    <System:String x:Key="DarkTheme1">Dark Theme 1</System:String>
+    <System:String x:Key="DarkTheme2">Dark Theme 2</System:String>
+    <System:String x:Key="Light">Light</System:String>
+    <System:String x:Key="WindowColor">Base theme:</System:String>
+
+    <System:String x:Key="Name">Name</System:String>
+    <System:String x:Key="Surname">Surname</System:String>
+
+
+    <System:String x:Key="UserName">First name</System:String>
+    <System:String x:Key="LastName">Last name</System:String>
+    <System:String x:Key="UserType">User type</System:String>
+    <System:String x:Key="SelectRole">Select role</System:String>
+
+    <System:String x:Key="Password">Password</System:String>
+    <System:String x:Key="Registration">Registration</System:String>
+    <System:String x:Key="LogIn">Log in</System:String>
+
+    <System:String x:Key="RegisterIn">Register</System:String>
+
+
+    <System:String x:Key="AranzmanID">Arrangement ID</System:String>
+    <System:String x:Key="Destinacija">Destination</System:String>
+    <System:String x:Key="Termin">Date</System:String>
+    <System:String x:Key="Trajanje">Duration</System:String>
+    <System:String x:Key="Cijena">Price</System:String>
+    <System:String x:Key="ImePrezimeKlijenta">Client</System:String>
+
+    <System:String x:Key="Aranzman">Arrangement</System:String>
+    <System:String x:Key="Rezervacija">Reservation</System:String>
+    <System:String x:Key="Klijent">Client</System:String>
+    <System:String x:Key="Usluge">Services</System:String>
+    <System:String x:Key="Prevoz">Transportation</System:String>
+    <System:String x:Key="Smjestaj">Accommodation</System:String>
+    <System:String x:Key="Zaposleni">Employees</System:String>
+    <System:String x:Key="Opcije">Options</System:String>
+
+    <System:String x:Key="PregledAranzmana">Arrangement Overview</System:String>
+    <System:String x:Key="DodavanjeAranzmana">Add Arrangement</System:String>
+    <System:String x:Key="IzmjenaBrisanjeAranzmana">Edit/Delete Arrangement</System:String>
+    <System:String x:Key="DodajAranzman">Add Arrangement</System:String>
+    <System:String x:Key="Izmijeni">Edit</System:String>
+    <System:String x:Key="Obrisi">Delete</System:String>
+    <System:String x:Key="DestinacijaAranzmana">Arrangement Destination</System:String>
+    <System:String x:Key="TrajanjeAranzmana">Duration</System:String>
+    <System:String x:Key="CijenaAranzmana">Price</System:String>
+    <System:String x:Key="SelectAranzman">Select Arrangement</System:String>
+    <System:String x:Key="FieldCannotBeEmpty">Field cannot be empty.</System:String>
+    <System:String x:Key="InvalidInputFormat">Invalid input format.</System:String>
+    <System:String x:Key="NotificationTitle">Notification</System:String>
+    <System:String x:Key="SuccessfulOperation">Operation successful!</System:String>
+
+    <System:String x:Key="TerminAranzmana">Date</System:String>
+
+    <System:String x:Key="PrevozID">Transport ID</System:String>
+    <System:String x:Key="TipPrevoza">Transport Type</System:String>
+    <System:String x:Key="NazivKompanije">Company Name</System:String>
+    <System:String x:Key="CijenaPrevoza">Transport Price</System:String>
+    <System:String x:Key="PregledPrevoza">Transport Overview</System:String>
+    <System:String x:Key="DodavanjePrevoza">Add Transport</System:String>
+    <System:String x:Key="IzmjenaBrisanjePrevoza">Edit/Delete Transport</System:String>
+    <System:String x:Key="DodajPrevoz">Add Transport</System:String>
+    <System:String x:Key="IzmijeniPrevoz">Edit Transport</System:String>
+    <System:String x:Key="ObrisiPrevoz">Delete Transport</System:String>
+    <System:String x:Key="SelectPrevoz">Select Transport</System:String>
+
+
+
+
+    <System:String x:Key="PregledKlijenata">Client Overview</System:String>
+    <System:String x:Key="DodavanjeKlijenta">Add Client</System:String>
+    <System:String x:Key="IzmjenaBrisanjeKlijenta">Edit/Delete Client</System:String>
+    <System:String x:Key="KlijentID">Client ID</System:String>
+    <System:String x:Key="Ime">First Name</System:String>
+    <System:String x:Key="Prezime">Last Name</System:String>
+    <System:String x:Key="Email">Email</System:String>
+    <System:String x:Key="Telefon">Phone</System:String>
+    <System:String x:Key="ImeKlijenta">Client's First Name</System:String>
+    <System:String x:Key="DodajKlijenta">Add Client</System:String>
+
+
+    <System:String x:Key="PregledRezervacija">Reservation Overview</System:String>
+    <System:String x:Key="DodavanjeRezervacije">Add Reservation</System:String>
+    <System:String x:Key="IzmjenaBrisanjeRezervacije">Edit/Delete Reservation</System:String>
+    <System:String x:Key="RezervacijaID">Reservation ID</System:String>
+    <System:String x:Key="Datum">Date</System:String>
+    
+    <System:String x:Key="UkupnaCijena">Total Price</System:String>
+    <System:String x:Key="NacinPlacanja">Payment Method</System:String>
+    <System:String x:Key="DatumRezervacije">Reservation Date</System:String>
+    <System:String x:Key="RezervacijaKlijent">Reservation Client</System:String>
+    <System:String x:Key="IzborAranzmana">Choose Arrangement</System:String>
+    <System:String x:Key="DodajRezervaciju">Add Reservation</System:String>
+
+
+    <System:String x:Key="PregledSmjestaja">Accommodation Overview</System:String>
+    <System:String x:Key="DodavanjeSmjestaja">Add Accommodation</System:String>
+    <System:String x:Key="IzmjenaBrisanjeSmjestaja">Edit/Delete Accommodation</System:String>
+    <System:String x:Key="SmjestajID">Accommodation ID</System:String>
+    <System:String x:Key="NazivSmjestaja">Accommodation Name</System:String>
+    <System:String x:Key="VrstaSmjestaja">Accommodation Type</System:String>
+    <System:String x:Key="Lokacija">Location</System:String>
+    <System:String x:Key="BrojZvjezdica">Star Rating</System:String>
+    <System:String x:Key="Pogodnosti">Amenities</System:String>
+    <System:String x:Key="IzborSmjestaja">Choose Accommodation</System:String>
+    <System:String x:Key="DodajSmjestaj">Add Accommodation</System:String>
+    <System:String x:Key="IzmjenaSmjestaja">Edit Accommodation</System:String>
+    <System:String x:Key="BrisanjeSmjestaja">Delete Accommodation</System:String>
+
+
+    <System:String x:Key="PregledUsluga">Service Overview</System:String>
+    <System:String x:Key="DodavanjeUsluge">Add Service</System:String>
+    <System:String x:Key="IzmjenaBrisanjeUsluge">Edit/Delete Service</System:String>
+    <System:String x:Key="UslugaID">Service ID</System:String>
+    <System:String x:Key="TipUsluge">Service Type</System:String>
+    <System:String x:Key="IzborUsluga">Choose Service</System:String>
+    <System:String x:Key="DodajUslugu">Add Service</System:String>
+    <System:String x:Key="IzmjenaUsluge">Edit Service</System:String>
+    <System:String x:Key="BrisanjeUsluge">Delete Service</System:String>
+
+
+
+
+    <System:String x:Key="PregledZaposlenih">Employees Overview</System:String>
+    <System:String x:Key="ID">ID</System:String>
+    <System:String x:Key="Pozicija">Position</System:String>
+    <System:String x:Key="Plata">Salary</System:String>
+
+    <!-- Adding Employee -->
+    <System:String x:Key="DodavanjeZaposlenog">Add Employee</System:String>
+    <System:String x:Key="ImeZaposlenog">Employee First Name</System:String>
+    <System:String x:Key="PrezimeZaposlenog">Employee Last Name</System:String>
+    <System:String x:Key="PozicijaZaposlenog">Employee Position</System:String>
+    <System:String x:Key="PlataZaposlenog">Employee Salary</System:String>
+    <System:String x:Key="DodajZaposlenog">Add Employee</System:String>
+
+    <!-- Editing/Deleting Employee -->
+    <System:String x:Key="IzmjenaBrisanjeZaposlenog">Edit/Delete Employee</System:String>
+    <System:String x:Key="IzmijeniZaposlenog">Edit Employee</System:String>
+    <System:String x:Key="ObrisiZaposlenog">Delete Employee</System:String>
+
+
+    <System:String x:Key="InvalidPasswordMessage">Incorrect password!</System:String>
+   
+    <System:String x:Key="IncorrectUsername">The username is incorrect!</System:String>
+    <System:String x:Key="SuccessfulRegistration">Registration successful!</System:String>
+</ResourceDictionary>

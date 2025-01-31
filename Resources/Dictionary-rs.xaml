@@ -1,0 +1,236 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+
+    <System:String x:Key="SmallFont">Sitni font</System:String>
+    <System:String x:Key="MidFont">Srednji font</System:String>
+    <System:String x:Key="BigFont">Krupni font</System:String>
+    <System:String x:Key="Default">Podrazumijevani</System:String>
+    <System:String x:Key="Serbian">Srpski</System:String>
+    <System:String x:Key="English">Engleski</System:String>
+    <System:String x:Key="FontAndLang">Font i jezik:</System:String>
+    <System:String x:Key="FontSize">Veličina fonta:</System:String>
+    <System:String x:Key="DarkTheme1">Tamna tema 1</System:String>
+    <System:String x:Key="DarkTheme2">Tamna tema 2</System:String>
+    <System:String x:Key="Light">Svijetla</System:String>
+    <System:String x:Key="WindowColor">Boja prozora:</System:String>
+
+    <System:String x:Key="Name">Ime</System:String>
+    <System:String x:Key="UserName">Ime</System:String>
+    <System:String x:Key="LastName">Prezime</System:String>
+    <System:String x:Key="Surname">Prezime</System:String>
+    <System:String x:Key="ShirtNumber">Broj dresa</System:String>
+    <System:String x:Key="Position">Pozicija</System:String>
+    <System:String x:Key="Club">Klub</System:String>
+    <System:String x:Key="SelectPosition">Izaberi poziciju</System:String>
+    <System:String x:Key="SelectClub">Izaberi klub</System:String>
+    <System:String x:Key="AddPlayer">Dodaj igrača</System:String>
+    <System:String x:Key="Edit">Izmjeni</System:String>
+    <System:String x:Key="Delete">Obriši</System:String>
+
+    <System:String x:Key="CardType">Tip kartona</System:String>
+    <System:String x:Key="CardTypeName">Naziv tipa kartona</System:String>
+    <System:String x:Key="Add">Dodaj</System:String>
+
+    <System:String x:Key="PositionID">Oznaka pozicije</System:String>
+    <System:String x:Key="PositionName">Naziv pozicije</System:String>
+    <System:String x:Key="AddPosition">Dodaj poziciju</System:String>
+
+    <System:String x:Key="ClubName">Naziv kluba</System:String>
+    <System:String x:Key="City">Grad</System:String>
+    <System:String x:Key="AddImage">Dodaj sliku</System:String>
+    <System:String x:Key="AddClub">Dodaj Klub</System:String>
+    <System:String x:Key="ImgUrl">URL slike</System:String>
+
+    
+    <System:String x:Key="UserType">Tip korisnika</System:String>
+    <System:String x:Key="SelectRole">Izaberi ulogu</System:String>
+
+    <System:String x:Key="Password">Lozinka</System:String>
+    <System:String x:Key="Registration">Registracija</System:String>
+    <System:String x:Key="LogIn">Prijavi se</System:String>
+
+    <System:String x:Key="RegisterIn">Registruj se</System:String>
+
+    <System:String x:Key="TerminAranzmana">Termin</System:String>
+
+    <System:String x:Key="Starters">Starteri</System:String>
+    <System:String x:Key="Number">Broj</System:String>
+    <System:String x:Key="Remove">Izbaci</System:String>
+    <System:String x:Key="Subs">Izmjene</System:String>
+    <System:String x:Key="Enter">Ubaci</System:String>
+    <System:String x:Key="Autogol">Autogol</System:String>
+    <System:String x:Key="SelectPlayer">Izaberi igrača</System:String>
+    <System:String x:Key="Goal">Gol</System:String>
+    <System:String x:Key="Substitution">Izmjena</System:String>
+    <System:String x:Key="YellowCard">Žuti karton</System:String>
+    <System:String x:Key="RedCard">Crveni karton</System:String>
+    <System:String x:Key="SndPeriod">2. pol</System:String>
+
+    <System:String x:Key="StadiumName">Naziv stadiona</System:String>
+    <System:String x:Key="Capacity">Kapacitet</System:String>
+    <System:String x:Key="Field">Tip podloge</System:String>
+    <System:String x:Key="AddStadium">Dodaj Stadion</System:String>
+
+    <System:String x:Key="GoalNum">Broj golova</System:String>
+    <System:String x:Key="YellowNum">Broj žutih kartona</System:String>
+    <System:String x:Key="RedNum">Broj crvenih kartona</System:String>
+    <System:String x:Key="Cards">Kartoni</System:String>
+    <System:String x:Key="Goals">Golovi</System:String>
+    <System:String x:Key="YellowCards">Žuti kartoni</System:String>
+    <System:String x:Key="RedCards">Crveni kartoni</System:String>
+    <System:String x:Key="Goalscorers">Strijelci</System:String>
+    <System:String x:Key="NoGoalPlayers">Igrači bey golova</System:String>
+    <System:String x:Key="Matches">Utakmice</System:String>
+    <System:String x:Key="Wins">Pobjede</System:String>
+    <System:String x:Key="Draws">Neriješene</System:String>
+    <System:String x:Key="Loses">Porazi</System:String>
+
+    <System:String x:Key="AddMatch">Dodaj utakmicu</System:String>
+    <System:String x:Key="Home">Domaći</System:String>
+    <System:String x:Key="Away">Gosti</System:String>
+    <System:String x:Key="HomeGoals">Domaći tim golovi</System:String>
+    <System:String x:Key="AwayGoals">Gostujući tim golovi</System:String>
+    <System:String x:Key="Stadium">Stadion</System:String>
+    <System:String x:Key="SelectHomeTeam">Izberi domaći tim</System:String>
+    <System:String x:Key="SelectAwayTeam">Izaberi gostujući tim</System:String>
+    <System:String x:Key="SelectStadium">Izaberi stadion</System:String>
+    <System:String x:Key="Open">Otvori</System:String>
+
+    <System:String x:Key="Statistic">Statistika</System:String>
+    <System:String x:Key="Options">Opcije</System:String>
+    <System:String x:Key="Users">Korisnici</System:String>
+    <System:String x:Key="Codebooks">Šifarnici</System:String>
+    <System:String x:Key="Stadiums">Stadioni</System:String>
+    <System:String x:Key="Players">Igrači</System:String>
+    <System:String x:Key="Clubs">Klubovi</System:String>
+
+
+    <System:String x:Key="Aranzman">Aranžman</System:String>
+    <System:String x:Key="Rezervacija">Rezervacija</System:String>
+    <System:String x:Key="Klijent">Klijent</System:String>
+    <System:String x:Key="Usluge">Usluge</System:String>
+    <System:String x:Key="Prevoz">Prevoz</System:String>
+    <System:String x:Key="Smjestaj">Smještaj</System:String>
+    <System:String x:Key="Zaposleni">Zaposleni</System:String>
+    <System:String x:Key="Opcije">Opcije</System:String>
+
+
+    <System:String x:Key="ImePrezimeKlijenta">Klijent</System:String>
+    <System:String x:Key="AranzmanID">Aranžman ID</System:String>
+    <System:String x:Key="Destinacija">Destinacija</System:String>
+    <System:String x:Key="Termin">Termin</System:String>
+    <System:String x:Key="Trajanje">Trajanje</System:String>
+    <System:String x:Key="Cijena">Cijena</System:String>
+    <System:String x:Key="PregledAranzmana">Pregled Aranžmana</System:String>
+    <System:String x:Key="DodavanjeAranzmana">Dodavanje Aranžmana</System:String>
+    <System:String x:Key="IzmjenaBrisanjeAranzmana">Izmjena/Brisanje Aranžmana</System:String>
+    <System:String x:Key="DodajAranzman">Dodaj Aranžman</System:String>
+    <System:String x:Key="Izmijeni">Izmijeni</System:String>
+    <System:String x:Key="Obrisi">Obriši</System:String>
+    <System:String x:Key="DestinacijaAranzmana">Destinacija Aranžmana</System:String>
+    <System:String x:Key="TrajanjeAranzmana">Trajanje</System:String>
+    <System:String x:Key="CijenaAranzmana">Cijena</System:String>
+    <System:String x:Key="SelectAranzman">Izaberi Aranžman</System:String>
+    <System:String x:Key="FieldCannotBeEmpty">Polje ne smije biti prazno.</System:String>
+    <System:String x:Key="InvalidInputFormat">Nedozvoljeni karakteri u unosu.</System:String>
+    <System:String x:Key="NotificationTitle">Obaveštenje</System:String>
+    <System:String x:Key="SuccessfulOperation">Operacija uspješna!</System:String>
+
+
+
+    <System:String x:Key="PrevozID">ID Prevoza</System:String>
+    <System:String x:Key="TipPrevoza">Tip Prevoza</System:String>
+    <System:String x:Key="NazivKompanije">Naziv Kompanije</System:String>
+    <System:String x:Key="CijenaPrevoza">Cijena Prevoza</System:String>
+    <System:String x:Key="PregledPrevoza">Pregled Prevoza</System:String>
+    <System:String x:Key="DodavanjePrevoza">Dodavanje Prevoza</System:String>
+    <System:String x:Key="IzmjenaBrisanjePrevoza">Izmjena/Brisanje Prevoza</System:String>
+    <System:String x:Key="DodajPrevoz">Dodaj Prevoz</System:String>
+    <System:String x:Key="IzmijeniPrevoz">Izmijeni Prevoz</System:String>
+    <System:String x:Key="ObrisiPrevoz">Obriši Prevoz</System:String>
+    <System:String x:Key="SelectPrevoz">Izaberi Prevoz</System:String>
+
+
+
+
+    <System:String x:Key="PregledKlijenata">Pregled Klijenata</System:String>
+    <System:String x:Key="DodavanjeKlijenta">Dodavanje Klijenta</System:String>
+    <System:String x:Key="IzmjenaBrisanjeKlijenta">Izmjena/Brisanje Klijenta</System:String>
+    <System:String x:Key="KlijentID">ID Klijenta</System:String>
+    <System:String x:Key="Ime">Ime</System:String>
+    <System:String x:Key="Prezime">Prezime</System:String>
+    <System:String x:Key="Email">Email</System:String>
+    <System:String x:Key="Telefon">Telefon</System:String>
+    <System:String x:Key="ImeKlijenta">Ime Klijenta</System:String>
+    <System:String x:Key="DodajKlijenta">Dodaj Klijenta</System:String>
+
+    <System:String x:Key="PregledRezervacija">Pregled Rezervacija</System:String>
+    <System:String x:Key="DodavanjeRezervacije">Dodavanje Rezervacije</System:String>
+    <System:String x:Key="IzmjenaBrisanjeRezervacije">Izmjena/Brisanje Rezervacije</System:String>
+    <System:String x:Key="RezervacijaID">ID Rezervacije</System:String>
+    <System:String x:Key="Datum">Datum</System:String>
+    
+    <System:String x:Key="UkupnaCijena">Ukupna Cijena</System:String>
+    <System:String x:Key="NacinPlacanja">Način Plačanja</System:String>
+    <System:String x:Key="DatumRezervacije">Datum Rezervacije</System:String>
+    <System:String x:Key="RezervacijaKlijent">Klijent Rezervacije</System:String>
+    <System:String x:Key="IzborAranzmana">Izbor Aranžmana</System:String>
+    <System:String x:Key="DodajRezervaciju">Dodaj Rezervaciju</System:String>
+
+
+
+    <System:String x:Key="PregledSmjestaja">Pregled Smještaja</System:String>
+    <System:String x:Key="DodavanjeSmjestaja">Dodavanje Smještaja</System:String>
+    <System:String x:Key="IzmjenaBrisanjeSmjestaja">Izmjena/Brisanje Smještaja</System:String>
+    <System:String x:Key="SmjestajID">ID Smještaja</System:String>
+    <System:String x:Key="NazivSmjestaja">Naziv Smještaja</System:String>
+    <System:String x:Key="VrstaSmjestaja">Vrsta Smještaja</System:String>
+    <System:String x:Key="Lokacija">Lokacija</System:String>
+    <System:String x:Key="BrojZvjezdica">Broj Zvjezdica</System:String>
+    <System:String x:Key="Pogodnosti">Pogodnosti</System:String>
+    <System:String x:Key="IzborSmjestaja">Izbor Smještaja</System:String>
+    <System:String x:Key="DodajSmjestaj">Dodaj Smještaj</System:String>
+    <System:String x:Key="IzmjenaSmjestaja">Izmjena Smještaja</System:String>
+    <System:String x:Key="BrisanjeSmjestaja">Brisanje Smještaja</System:String>
+
+
+
+    <System:String x:Key="PregledZaposlenih">Pregled Zaposlenih</System:String>
+    <System:String x:Key="ID">ID</System:String>
+    <System:String x:Key="Pozicija">Pozicija</System:String>
+    <System:String x:Key="Plata">Plata</System:String>
+
+    <!-- Dodavanje Zaposlenog -->
+    <System:String x:Key="DodavanjeZaposlenog">Dodavanje Zaposlenog</System:String>
+    <System:String x:Key="ImeZaposlenog">Ime Zaposlenog</System:String>
+    <System:String x:Key="PrezimeZaposlenog">Prezime Zaposlenog</System:String>
+    <System:String x:Key="PozicijaZaposlenog">Pozicija Zaposlenog</System:String>
+    <System:String x:Key="PlataZaposlenog">Plata Zaposlenog</System:String>
+    <System:String x:Key="DodajZaposlenog">Dodaj Zaposlenog</System:String>
+
+    <!-- Izmjena/Brisanje Zaposlenog -->
+    <System:String x:Key="IzmjenaBrisanjeZaposlenog">Izmjena/Brisanje Zaposlenog</System:String>
+    <System:String x:Key="IzmijeniZaposlenog">Izmijeni Zaposlenog</System:String>
+    <System:String x:Key="ObrisiZaposlenog">Obriši Zaposlenog</System:String>
+
+
+    <System:String x:Key="PregledUsluga">Pregled Usluga</System:String>
+    <System:String x:Key="DodavanjeUsluge">Dodavanje Usluge</System:String>
+    <System:String x:Key="IzmjenaBrisanjeUsluge">Izmjena/Brisanje Usluge</System:String>
+    <System:String x:Key="UslugaID">ID Usluge</System:String>
+    <System:String x:Key="TipUsluge">Tip Usluge</System:String>
+    <System:String x:Key="IzborUsluga">Izbor Usluge</System:String>
+    <System:String x:Key="DodajUslugu">Dodaj Uslugu</System:String>
+    <System:String x:Key="IzmjenaUsluge">Izmjena Usluge</System:String>
+    <System:String x:Key="BrisanjeUsluge">Brisanje Usluge</System:String>
+
+
+
+
+
+
+    <System:String x:Key="InvalidPasswordMessage">Lozinka nije ispravna!</System:String>
+    <System:String x:Key="IncorrectUsername">Korisničko ime ne postoji!</System:String>
+    <System:String x:Key="SuccessfulRegistration">Uspješna registracija!</System:String>
+</ResourceDictionary>

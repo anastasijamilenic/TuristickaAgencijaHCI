@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="TuristickaAgencija.Views.RezervacijaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TuristickaAgencija.ViewModels"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:RezervacijaViewModel />
+    </UserControl.DataContext>
+
+    <DockPanel Background="{DynamicResource MaterialDesignBackground}">
+        <Grid Background="{DynamicResource MaterialDesignBackground}">
+            <!-- TabControl to organize sections into tabs -->
+            <TabControl>
+                <!-- Tab for displaying Rezervacije -->
+                <TabItem Header="{DynamicResource PregledRezervacija}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  SelectedItem="{Binding SelectedRezervacija, Mode=TwoWay}"
+                                  ItemsSource="{Binding Rezervacije}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource RezervacijaID}" Binding="{Binding IdRezervacije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Klijent}" Binding="{Binding IdKlijentaNavigation.ImePrezime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Aranzman}" Binding="{Binding IdAranzmanaNavigation.NazivDestinacije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Datum}" Binding="{Binding DatumRezervacije, StringFormat='dd.MM.yyyy'}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource UkupnaCijena}" Binding="{Binding UkupnaCijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for adding a new Rezervacija -->
+                <TabItem Header="{DynamicResource DodavanjeRezervacije}">
+                    <Grid VerticalAlignment="Top">
+                        <StackPanel Orientation="Vertical" Margin="10">
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource ImePrezimeKlijenta}"
+                                     Text="{Binding NewRezervacija.IdKlijentaNavigation.ImePrezime, UpdateSourceTrigger=PropertyChanged}"
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource DestinacijaAranzmana}"
+                                     Text="{Binding NewRezervacija.IdAranzmanaNavigation.NazivDestinacije, UpdateSourceTrigger=PropertyChanged}"
+                                     Width="350" Margin="0,5,0,15" />
+                            <DatePicker materialDesign:HintAssist.Hint="{DynamicResource DatumRezervacije}"
+                                        SelectedDate="{Binding NewRezervacija.DatumRezervacije, Mode=TwoWay}"
+                                        Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource UkupnaCijena}"
+                                     Text="{Binding NewRezervacija.UkupnaCijena, UpdateSourceTrigger=PropertyChanged}"
+                                     Width="350" Margin="0,5,0,15" />
+                            <Button Content="{DynamicResource DodajRezervaciju}" 
+                                    Command="{Binding AddRezervacijaCommand}"
+                                    Width="200" Height="40" Margin="0,20,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for editing or deleting an existing Rezervacija -->
+                <TabItem Header="{DynamicResource IzmjenaBrisanjeRezervacije}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  SelectedItem="{Binding SelectedRezervacija, Mode=TwoWay}"
+                                  ItemsSource="{Binding Rezervacije}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource RezervacijaID}" Binding="{Binding IdRezervacije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Klijent}" Binding="{Binding IdKlijentaNavigation.ImePrezime}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Aranzman}" Binding="{Binding IdAranzmanaNavigation.NazivDestinacije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Datum}" Binding="{Binding DatumRezervacije, StringFormat='dd.MM.yyyy'}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource UkupnaCijena}" Binding="{Binding UkupnaCijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Center">
+                            <Button Content="{DynamicResource Izmijeni}" 
+                                    Command="{Binding EditRezervacijaCommand}" 
+                                    Width="100" Height="40" Margin="10,0,10,0" />
+                            <Button Content="{DynamicResource Obrisi}" 
+                                    Command="{Binding DeleteRezervacijaCommand}" 
+                                    Width="100" Height="40" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</UserControl>

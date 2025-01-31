@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AranzmanView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\KlijentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OpcijeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PrevozView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RezervacijaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SmjestajView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UslugaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ZaposleniView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Dictionary-en.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Dictionary-rs.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Tema1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Tema2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Tema3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AranzmanView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\KlijentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OpcijeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PrevozView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RezervacijaView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SmjestajView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UslugaView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ZaposleniView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="TuristickaAgencija.Views.PrevozView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TuristickaAgencija.ViewModels"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:PrevozViewModel />
+    </UserControl.DataContext>
+
+    <DockPanel Background="{DynamicResource MaterialDesignBackground}">
+        <Grid Background="{DynamicResource MaterialDesignBackground}">
+            <TabControl>
+                <!-- Tab for displaying Prevoz -->
+                <TabItem Header="{DynamicResource PregledPrevoza}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  SelectedItem="{Binding SelectedPrevoz, Mode=TwoWay}"
+                                  ItemsSource="{Binding Prevozi}"
+                                  CanUserAddRows="False"
+                                  MaxHeight="250"
+                                  HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto"
+                                  FontSize="14"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource PrevozID}" Binding="{Binding IdPrevoza}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource TipPrevoza}" Binding="{Binding TipPrevoza}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource NazivKompanije}" Binding="{Binding NazivKompanije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Cijena}" Binding="{Binding Cijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for adding new Prevoz -->
+                <TabItem Header="{DynamicResource DodavanjePrevoza}" IsEnabled="{Binding IsAdmin}">
+                    <Grid Margin="0,20,0,0">
+                        <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource TipPrevoza}"
+                                     Width="350"
+                                     Margin="0,5,0,15"
+                                     Text="{Binding NewPrevoz.TipPrevoza, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource NazivKompanije}"
+                                     Width="350"
+                                     Margin="0,5,0,15"
+                                     Text="{Binding NewPrevoz.NazivKompanije, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Cijena}"
+                                     Width="350"
+                                     Margin="0,5,0,15"
+                                     Text="{Binding NewPrevoz.Cijena, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <Button Content="{DynamicResource DodajPrevoz}"
+                                    Width="200"
+                                    Height="40"
+                                    Command="{Binding AddPrevozCommand}"
+                                    Margin="0,20,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- Tab for editing or deleting Prevoz -->
+                <TabItem Header="{DynamicResource IzmjenaBrisanjePrevoza}" IsEnabled="{Binding IsAdmin}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- DataGrid for Editing/Deleting Prevoz -->
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  SelectedItem="{Binding SelectedPrevoz, Mode=TwoWay}"
+                                  ItemsSource="{Binding Prevozi}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource PrevozID}" Binding="{Binding IdPrevoza}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource TipPrevoza}" Binding="{Binding TipPrevoza}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource NazivKompanije}" Binding="{Binding NazivKompanije}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Cijena}" Binding="{Binding Cijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Center">
+                            <Button Content="{DynamicResource Izmijeni}"
+                                    Command="{Binding EditPrevozCommand}"
+                                    Width="100"
+                                    Height="40"
+                                    Margin="10,0,10,0" />
+                            <Button Content="{DynamicResource Obrisi}"
+                                    Command="{Binding DeletePrevozCommand}"
+                                    Width="100"
+                                    Height="40" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="TuristickaAgencija.Views.SmjestajView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TuristickaAgencija.ViewModels"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:SmjestajViewModel />
+    </UserControl.DataContext>
+
+    <DockPanel Background="{DynamicResource MaterialDesignBackground}">
+        <Grid Background="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Top">
+            <TabControl>
+                <!-- Pregled Smjestaja -->
+                <TabItem Header="{DynamicResource PregledSmjestaja}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  SelectedItem="{Binding SelectedSmjestaj, Mode=TwoWay}"
+                                  ItemsSource="{Binding Smjestaji}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource NazivSmjestaja}" Binding="{Binding NazivSmjestaja}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource VrstaSmjestaja}" Binding="{Binding VrstaSmjestaja}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Lokacija}" Binding="{Binding Lokacija}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource BrojZvjezdica}" Binding="{Binding BrojZvjezdica}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Pogodnosti}" Binding="{Binding Pogodnosti}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Cijena}" Binding="{Binding Cijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+
+                <!-- Dodavanje Smjestaja -->
+                <TabItem Header="{DynamicResource DodavanjeSmjestaja}" IsEnabled="{Binding IsAdmin}">
+                    <Grid VerticalAlignment="Top">
+                        <StackPanel Orientation="Vertical" Margin="10">
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource NazivSmjestaja}"
+                                     Text="{Binding NewSmjestaj.NazivSmjestaja, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource VrstaSmjestaja}"
+                                     Text="{Binding NewSmjestaj.VrstaSmjestaja, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Lokacija}"
+                                     Text="{Binding NewSmjestaj.Lokacija, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource BrojZvjezdica}"
+                                     Text="{Binding NewSmjestaj.BrojZvjezdica, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Pogodnosti}"
+                                     Text="{Binding NewSmjestaj.Pogodnosti, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Cijena}"
+                                     Text="{Binding NewSmjestaj.Cijena, UpdateSourceTrigger=PropertyChanged}" 
+                                     Width="350" Margin="0,5,0,15" />
+                            <Button Content="{DynamicResource DodajSmjestaj}"
+                                    Command="{Binding AddSmjestajCommand}"
+                                    Width="200" Height="40" Margin="0,20,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- Izmjena/Brisanje Smjestaja -->
+                <TabItem Header="{DynamicResource IzmjenaBrisanjeSmjestaja}" IsEnabled="{Binding IsAdmin}">
+                    <Grid VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  SelectedItem="{Binding SelectedSmjestaj, Mode=TwoWay}"
+                                  ItemsSource="{Binding Smjestaji}"
+                                  CanUserAddRows="False"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Top"
+                                  Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource NazivSmjestaja}" Binding="{Binding NazivSmjestaja}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource VrstaSmjestaja}" Binding="{Binding VrstaSmjestaja}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Lokacija}" Binding="{Binding Lokacija}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource BrojZvjezdica}" Binding="{Binding BrojZvjezdica}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Pogodnosti}" Binding="{Binding Pogodnosti}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource Cijena}" Binding="{Binding Cijena}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Center">
+                            <Button Content="{DynamicResource Izmijeni}" Command="{Binding EditSmjestajCommand}" Width="100" Height="40" Margin="10,0,10,0" />
+                            <Button Content="{DynamicResource Obrisi}" Command="{Binding DeleteSmjestajCommand}" Width="100" Height="40" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</UserControl>

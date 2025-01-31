@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Definišemo boju -->
+    <Color x:Key="PrimaryColor">#FF6200EE</Color>
+
+    <!-- Stil za dugme -->
+    <Style TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource PrimaryColorBrush}" />
+    </Style>
+
+    <!-- Kreiramo SolidColorBrush za primarnu boju -->
+    <SolidColorBrush x:Key="PrimaryColorBrush" Color="{StaticResource PrimaryColor}" />
+</ResourceDictionary>

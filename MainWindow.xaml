@@ -1,0 +1,31 @@
+﻿<Window x:Class="TuristickaAgencija.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TuristickaAgencija"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280"
+        Foreground="{DynamicResource MaterialDesignBody}"
+        FontFamily="Segoe UI">
+
+    <DockPanel Background="{DynamicResource MaterialDesignBackground}">
+        <!-- Navigacioni bar -->
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Menu VerticalAlignment="Center" Background="Transparent" 
+                  HorizontalAlignment="Left"
+                  FontSize="14" FontFamily="Segoe UI">
+                <MenuItem Header="{DynamicResource Aranzman}" Click="OpenAranzman" x:Name="AranzmanMenuItem" />
+                <MenuItem Header="{DynamicResource Rezervacija}" Click="OpenRezervacija" x:Name="RezervacijaMenuItem" />
+                <MenuItem Header="{DynamicResource Klijent}" Click="OpenKlijent" x:Name="KlijentMenuItem" />
+                <MenuItem Header="{DynamicResource Usluge}" Click="OpenUsluge" x:Name="UslugeMenuItem" />
+                <MenuItem Header="{DynamicResource Prevoz}" Click="OpenPrevoz" x:Name="PrevozMenuItem" />
+                <MenuItem Header="{DynamicResource Smjestaj}" Click="OpenSmjestaj" x:Name="SmjestajMenuItem" />
+                <MenuItem Header="{DynamicResource Zaposleni}" Click="OpenZaposleni" x:Name="ZaposleniMenuItem" />
+                <MenuItem Header="{DynamicResource Opcije}" Click="OpenOpcije" x:Name="OpcijeMenuItem" />
+            </Menu>
+        </StackPanel>
+        <ContentControl x:Name="MainContent" />
+    </DockPanel>
+</Window>
