@@ -22,11 +22,14 @@ Po pokretanju aplikacije prikazuje se login stranica. Nakon uspješne prijave pr
 
 
 
----
-![Screenshot (66)](https://github.com/user-attachments/assets/efe21d6c-5dd3-49e9-96bb-e5792537ae45)
+---![Screenshot (66)](https://github.com/user-attachments/assets/42d3ae8d-b3c3-4e21-8947-108a6ffb2b46)
 
-![Screenshot (67)](https://github.com/user-attachments/assets/1b267cc6-b8ae-4140-afd5-c70d095a7871)
-![Screenshot (68)](https://github.com/user-attachments/assets/8f43047a-c923-4584-8711-d9265a2a7264)
+
+![Screenshot (67)](https://github.com/user-attachments/assets/772790c4-91e7-46d8-a8bf-2ec091b84f7b)
+
+
+
+![Screenshot (68)](https://github.com/user-attachments/assets/d376c870-b9a9-4a9a-8fd4-09ed93378461)
 
 
 
@@ -37,16 +40,16 @@ Za svaku stavku iz glavnog menija obezbijeđene su CRUD operacije, s napomenom d
 Registracija na sistem nije moguća, samo adminski nalozi mogu dodati nove korisnike i imaju privilegiju postavljanja njihovog status (admin ili običan radnik).
 
 
-![Screenshot (69)](https://github.com/user-attachments/assets/2d153e3a-45f4-439b-a220-2ac0bc22e52b)
 
-
-![Screenshot (70)](https://github.com/user-attachments/assets/2a8696a2-7242-47e3-b356-2d50bfe1745d)
+![Screenshot (69)](https://github.com/user-attachments/assets/e077933a-d16d-4aa8-b099-ea9e6208002f)
+![Screenshot (70)](https://github.com/user-attachments/assets/0d9ef72c-54d3-4283-af6e-b9bb5b5df209)
 
 
 ### **4. Dodatna podešavanja**  
 Svi korisnici imaju mogućnost odabira između tri različite teme, dva fonta (Arial i Calibri), kao i tri veličine fonta. Takođe, moguće je dinamičko prebacivanje jezika sa srpskog na engleski i obrnuto.
 
-![Screenshot (71)](https://github.com/user-attachments/assets/117b6026-7841-4898-ae60-e33e9c46c90c)
+
+![Screenshot (71)](https://github.com/user-attachments/assets/42b3c618-f43b-4b1a-b623-fd8f39d7f73f)
 
 
 ### **5. Zaključak**  
